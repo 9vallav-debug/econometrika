@@ -1,3 +1,58 @@
+<section style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-top: 20px;">
+    
+    <h2 style="color: #217346; border-bottom: 2px solid #e8f5e9; padding-bottom: 8px; margin-top: 0;">
+        📊 Лабораторная работа: Построение модели парной линейной регрессии
+    </h2>
+    
+    <p style="line-height: 1.6; color: #555;">
+        Для выполнения задания скачайте подготовленный файл данных и выполните расчеты по шагам, описанным в инструкции ниже.
+    </p>
+
+    <!-- Блок скачивания файла -->
+    <div style="background: #f1f8f5; border: 1px dashed #217346; padding: 20px; border-radius: 6px; text-align: center; margin: 20px 0;">
+        <a href="regression.xlsx" download="Шаблон_Регрессия.xlsx" style="display: inline-block; padding: 12px 25px; background-color: #217346; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            📥 Скачать файл данных (regression.xlsx)
+        </a>
+    </div>
+
+    <!-- Пошаговая инструкция -->
+    <div style="background: #fff3e0; border-left: 4px solid #e65100; padding: 20px; border-radius: 0 6px 6px 0; margin-top: 25px;">
+        <h3 style="color: #e65100; margin-top: 0; font-size: 1.2rem;">🎯 Пошаговый алгоритм выполнения работы:</h3>
+        
+        <ol style="margin: 0; padding-left: 20px; line-height: 1.7; color: #333;">
+            <li style="margin-bottom: 12px;">
+                <strong>Подготовка данных:</strong> Откройте скачанный файл в Microsoft Excel. Ознакомьтесь с выборкой. Столбец <code>X</code> содержит объясняющую переменную (фактор), а столбец <code>Y</code> — зависимую переменную (результат).
+            </li>
+            <li style="margin-bottom: 12px;">
+                <strong>Активация инструментария:</strong> Перейдите на вкладку верхнего меню <em>«Данные»</em>. Убедитесь, что в крайней правой панели у вас включен инструмент <strong>«Анализ данных»</strong>. 
+                <br><span style="font-size: 0.9rem; color: #666;">* Если его нет, зайдите в Файл -> Параметры -> Надстройки -> Надстройки Excel (Перейти) -> Отметьте галочкой «Пакет анализа».</span>
+            </li>
+            <li style="margin-bottom: 12px;">
+                <strong>Запуск регрессионного анализа:</strong> Нажмите на <em>«Анализ данных»</em>, выберите в списке строку <strong>«Регрессия»</strong> и нажмите ОК.
+            </li>
+            <li style="margin-bottom: 12px;">
+                <strong>Ввод диапазонов ячеек:</strong> 
+                <br>• В поле «Входной интервал Y» выделите мышкой столбец с данными Y (включая заголовок).
+                <br>• В поле «Входной интервал X» выделите столбец с данными X (включая заголовок).
+                <br>• Обязательно поставьте галочку напротив пункта <strong>«Метки»</strong> (чтобы Excel учел названия столбцов).
+            </li>
+            <li style="margin-bottom: 12px;">
+                <strong>Вывод результатов:</strong> В параметрах вывода выберите пункт <em>«Новый рабочий лист»</em> и нажмите ОК.
+            </li>
+            <li style="margin-bottom: 12px;">
+                <strong>Анализ уравнения:</strong> На созданном листе найдите таблицу коэффициентов. Используя значения «Y-пересечение» (коэффициент $a$) и переменной X (коэффициент $b$), запишите итоговое уравнение парной регрессии: <code>Y = a + b*X</code>.
+            </li>
+            <li style="margin-bottom: 0;">
+                <strong>Оценка качества:</strong> Посмотрите на значение показателя <strong>R-квадрат (R-square)</strong>. Сделайте письменный вывод о том, на сколько процентов построенная модель объясняет изменчивость зависимой переменной.
+            </li>
+        </ol>
+    </div>
+
+    <p style="margin-top: 25px; margin-bottom: 0; font-size: 0.9rem; color: #666; text-align: center;">
+        Выполненную работу сохраните под именем <code>ФИО_Эконометрика_ЛР2.xlsx</code> и отправьте на проверку.
+    </p>
+
+</section>
 <a href="regression.xlsx" download="Шаблон_Регрессия.xlsx" style="
     display: inline-block; 
     padding: 12px 25px; 
