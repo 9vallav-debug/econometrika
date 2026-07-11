@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тема 3: Множественная линейная регрессия</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #217346;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover { text-decoration: underline; }
+        .card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        h1 { color: #217346; margin-top: 0; font-size: 2rem; }
+        h2 { color: #217346; border-bottom: 2px solid #e8f5e9; padding-bottom: 8px; margin-top: 30px; }
+        .formula-box {
+            background-color: #f1f5f9;
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 15px 0;
+            color: #0f172a;
+        }
+        .highlight-box {
+            background-color: #e8f5e9;
+            border-left: 4px solid #217346;
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .excel-box {
+            background: #f1f8f5;
+            border: 1px dashed #217346;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .btn-excel {
+            display: inline-block;
+            background-color: #217346;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .btn-excel:hover { background-color: #164f30; }
+        .task-box {
+            background: #fff3e0;
+            border-left: 4px solid #e65100;
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+        .task-title {
+            color: #e65100;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        ol { margin-left: 20px; padding-left: 0; }
+        li { margin-bottom: 12px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Возврат на главную -->
+        <a href="index.html" class="back-link">← Вернуться к списку тем</a>
+
+        <main class="card">
+            <h1>Тема 3: Множественная линейная регрессия</h1>
+            
+            <!-- БЛОК ТЕОРИИ -->
+            <section>
+                <h2>1. Теоретический материал</h2>
+                <p>В реальной экономике на один результат (зависимую переменную $Y$) почти всегда влияет несколько факторов одновременно. Например, на стоимость квартиры ($Y$) влияет не только её площадь ($X_1$), но и расстояние до метро ($X_2$), а также этаж ($X_3$).</p>
+                <p>Для описания таких процессов используется <strong>модель множественной линейной регрессии</strong>. Её теоретическое уравнение имеет следующий вид:</p>
+                
+                <div class="formula-box">
+                    Y = a + b1 * X1 + b2 * X2 + ... + bn * Xn + e
+                </div>
+                
+                <p>Где $a$ — свободный член модели, $b_1, b_2...b_n$ — коэффициенты регрессии при соответствующих факторах, а $e$ — случайная ошибка модели.</p>
+                
+                <div class="highlight-box">
+                    <strong>Важная ловушка: Мультиколлинеарность.</strong> При построении множественной регрессии нельзя включать факторы, которые сильно связаны между собой (например, общую и жилую площадь квартиры одновременно). Это исказит коэффициенты и сделает модель неверной.
+                </div>
+            </section>
+
+            <!-- БЛОК СКАЧИВАНИЯ ФАЙЛА EXCEL -->
+            <section class="excel-box">
+                <p style="margin-top: 0; font-weight: 500;">Для проведения множественного регрессионного анализа скачайте рабочий датасет:</p>
+                <!-- Файл multireg.xlsx нужно будет загрузить в репозиторий, как вы делали ранее -->
+                <a href="multireg.xlsx" download="Шаблон_Множественная_Регрессия.xlsx" class="btn-excel">
+                    📊 Скачать файл данных (multireg.xlsx)
+                </a>
+            </section>
+
+            <!-- БЛОК ПРАКТИЧЕСКОГО ЗАДАНИЯ -->
+            <section class="task-box">
+                <div class="task-title">🎯 Лабораторная работа: Расчет множественной регрессии</div>
+                <p>Откройте скачанный Excel-файл и выполните экономико-статистический анализ по шагам:</p>
+                <ol>
+                    <li><strong>Анализ факторов:</strong> Внимательно изучите переменные в таблице. Столбец <code>Y</code> — зависимый показатель, столбцы <code>X1</code> и <code>X2</code> — объясняющие факторы.</li>
+                    <li><strong>Запуск инструмента:</strong> Откройте вкладку <em>«Данные»</em> ➔ <em>«Анализ данных»</em> ➔ выберите инструмент <strong>«Регрессия»</strong>.</li>
+                    <li><strong>Выделение интервалов (Главное отличие!):</strong>
+                        <br>• В поле «Входной интервал Y» выделите один столбец с переменной Y.
+                        <br>• В поле «Входной интервал X» выделите <strong>сразу два столбца (X1 и X2) вместе</strong>, захватив их одной рамкой.
+                    </li>
+                    <li><strong>Оформление вывода:</strong> Не забудьте отметить галочку <strong>«Метки»</strong>, выберите вывод на новый лист и нажмите ОК.</li>
+                    <li><strong>Интерпретация результатов:</strong> 
+                        <br>• Запишите полученное уравнение вида: <code>Y = a + b1*X1 + b2*X2</code>.
+                        <br>• Посмотрите на показатели <strong>t-статистики</strong> для каждого фактора. Если значение по модулю меньше 2, данный фактор считается статистически незначимым для модели.
+                    </li>
+                </ol>
+                <p style="margin-bottom: 0; font-size: 0.9rem; color: #555;">* Готовый файл с расчетами и выводами сохраните и отправьте на проверку преподавателю.</p>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
