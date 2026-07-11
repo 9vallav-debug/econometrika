@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучающий курс по Excel</title>
+    <style>
+        /* Базовые современные стили для страницы */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #217346; /* Фирменный зеленый цвет Excel */
+            margin: 0 0 10px 0;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        
+        /* Стили для карточек с темами */
+        .topic-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .topic-card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            border-left: 5px solid #217346;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .topic-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .topic-title {
+            font-size: 1.3rem;
+            color: #217346;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+        .topic-desc {
+            color: #555;
+            margin: 0 0 15px 0;
+        }
+        
+        /* Метки содержимого (Теория, Файл, Задание) */
+        .badges {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .badge {
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        .badge-theory { background: #e3f2fd; color: #0d47a1; }
+        .badge-file { background: #e8f5e9; color: #1b5e20; }
+        .badge-task { background: #fff3e0; color: #e65100; }
+
+        /* Стильная кнопка перехода */
+        .btn-link {
+            display: inline-block;
+            background-color: #217346;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+        .btn-link:hover {
+            background-color: #164f30;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Изучение Microsoft Excel</h1>
+            <p class="subtitle">Интерактивный онлайн-курс: от азов до автоматических отчетов</p>
+        </header>
+
+        <main class="topic-list">
+            
+            <!-- ТЕМА 1 -->
+            <section class="topic-card">
+                <div class="topic-title">Тема 1: Знакомство с интерфейсом и ввод данных</div>
+                <p class="topic-desc">Изучим структуру книги, работу с листами, строками и ячейками. Разберем основные типы данных и правила их корректного ввода.</p>
+                <div class="badges">
+                    <span class="badge badge-theory">📖 Теория</span>
+                    <span class="badge badge-task">✍️ Задание на проверку</span>
+                </div>
+                <a href="topic1.html" class="btn-link">Открыть тему →</a>
+            </section>
+
+            <!-- ТЕМА 2 -->
+            <section class="topic-card">
+                <div class="topic-title">Тема 2: Формулы, расчеты и суммирование</div>
+                <p class="topic-desc">Научимся связывать ячейки математическими формулами. Узнаем, как автоматически считать общие суммы, средние значения и настраивать выгрузку отчетов.</p>
+                <div class="badges">
+                    <span class="badge badge-theory">📖 Теория</span>
+                    <span class="badge badge-file">📊 Excel-шаблон</span>
+                    <span class="badge badge-task">✍️ Практическая работа</span>
+                </div>
+                <a href="topic2.html" class="btn-link">Открыть тему →</a>
+            </section>
+
+            <!-- ТЕМА 3 -->
+            <section class="topic-card">
+                <div class="topic-title">Тема 3: Работа со сложными функциями (ВПР, ЕСЛИ)</div>
+                <p class="topic-desc">Разберем логические условия и инструменты связывания нескольких таблиц между собой. Автоматизируем рутинный поиск данных.</p>
+                <div class="badges">
+                    <span class="badge badge-theory">📖 Теория</span>
+                    <span class="badge badge-file">📊 Файл-заготовка</span>
+                    <span class="badge badge-task">✍️ Итоговый тест</span>
+                </div>
+                <a href="topic3.html" class="btn-link">Открыть тему →</a>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
