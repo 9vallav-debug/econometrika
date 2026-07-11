@@ -116,6 +116,7 @@
     </div>
 
     <!-- Скрипт генерации с исправленной кодировкой и защитой от undefined -->
+    <!-- Скрипт генерации с разделением по колонкам через точку с запятой -->
     <script>
     function generateExcel() {
         // Данные таблицы
@@ -125,8 +126,8 @@
             ["Экономический показатель В", 25, 45]
         ];
 
-        // Шапка таблицы
-        let csvContent = "Наименование фактора\tОбъем (ед.)\tУровень (у.е.)\tИтоговый показатель\n";
+        // Шапка таблицы (разделяем колонки точкой с запятой)
+        let csvContent = "Наименование фактора;Объем (ед.);Уровень (у.е.);Итоговый показатель\n";
         let totalSum = 0;
 
         // Заполнение строк и математический расчет
@@ -137,18 +138,19 @@
             const rowSum = quantity * price;
             totalSum += rowSum;
             
-            csvContent += name + "\t" + quantity + "\t" + price + "\t" + rowSum + "\n";
+            // Собираем строку через точку с запятой
+            csvContent += name + ";" + quantity + ";" + price + ";" + rowSum + "\n";
         });
 
-        // Строка итога (без undefined)
+        // Строка итога (добавляем три точки с запятой, чтобы сумма ушла в четвертый столбец к остальным суммам)
         csvContent += "\n";
-        csvContent += "Итоговое значение модели\t\t\t" + totalSum + "\n";
+        csvContent += "Итоговое значение модели;;;" + totalSum + "\n";
 
-        // Добавляем специальную метку BOM (\uFEFF), чтобы Excel сразу читал русский текст в UTF-8
+        // Сохранение файла с маркером BOM для русского языка
         const blob = new Blob(["\uFEFF" + csvContent], { type: "text/xls;charset=utf-8;" });
         const link = document.createElement("a");
         link.href = URL.createObjectURL(blob);
-        link.download = "Data_Topic_1.xls"; // Оставляем этот формат, теперь он откроется идеально
+        link.download = "Data_Topic_1.xls";
         
         document.body.appendChild(link);
         link.click();
