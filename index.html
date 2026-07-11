@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Эконометрика и моделирование в Excel</title>
-    <style>
-        /* Главные стили оформления */
+   <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: #f1f5f9; /* Мягкий серый фон сайта */
+            color: #1e293b; /* Строгий темно-серый текст */
             margin: 0;
             padding: 0;
         }
@@ -25,20 +24,19 @@
             background: #ffffff;
             padding: 35px 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-bottom: 3px solid #1e40af; /* Синяя полоса в шапке */
         }
         h1 {
-            color: #217346;
+            color: #1e40af; /* Глубокий синий цвет заголовка */
             margin: 0 0 10px 0;
             font-size: 2.2rem;
         }
         .subtitle {
-            color: #555;
+            color: #64748b; /* Стальной серый */
             font-size: 1.1rem;
             margin: 0;
         }
-        
-        /* Список карточек */
         .topic-list {
             display: flex;
             flex-direction: column;
@@ -48,27 +46,25 @@
             background: #ffffff;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-            border-left: 5px solid #217346;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            border-left: 5px solid #1e40af; /* Синяя полоса слева на карточке */
             transition: transform 0.2s, box-shadow 0.2s;
         }
         .topic-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
         }
         .topic-title {
             font-size: 1.35rem;
-            color: #217346;
+            color: #1e40af; /* Синие заголовки тем */
             margin: 0 0 12px 0;
             font-weight: bold;
         }
         .topic-desc {
-            color: #555;
+            color: #475569;
             margin: 0 0 20px 0;
             font-size: 0.98rem;
         }
-        
-        /* Метки содержимого (Баджи) */
         .badges {
             display: flex;
             gap: 10px;
@@ -81,26 +77,24 @@
             border-radius: 20px;
             font-weight: 600;
         }
-        .badge-theory { background: #e3f2fd; color: #0d47a1; }
-        .badge-file { background: #e8f5e9; color: #1b5e20; }
-        .badge-task { background: #fff3e0; color: #e65100; }
-        .badge-video { background: #fce4ec; color: #c2185b; }
+        .badge-theory { background: #e0f2fe; color: #0369a1; }
+        .badge-file { background: #f1f5f9; color: #475569; } /* Серый бадж для файлов */
+        .badge-task { background: #fef3c7; color: #b45309; }
+        .badge-video { background: #f3e8ff; color: #6b21a8; }
 
-        /* Ссылки-кнопки */
         .btn-link {
             display: inline-block;
-            background-color: #217346;
+            background-color: #1e40af; /* Синяя кнопка */
             color: white;
             text-decoration: none;
             padding: 10px 22px;
             border-radius: 6px;
             font-weight: 600;
             font-size: 0.95rem;
-            box-shadow: 0 2px 4px rgba(33, 115, 70, 0.15);
             transition: background 0.2s;
         }
         .btn-link:hover {
-            background-color: #164f30;
+            background-color: #1d4ed8; /* Ярко-синий при наведении */
         }
     </style>
 </head>
