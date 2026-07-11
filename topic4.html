@@ -170,30 +170,3 @@
                 <div style="margin-bottom: 25px;" class="quiz-question" data-correct="1">
                     <p style="font-weight: 600; margin-bottom: 10px;">3. Зачем при добавлении линии тренда на график выводить значение R-квадрат (R²)?</p>
                     <label style="display: block; margin-bottom: 8px; cursor: pointer;"><input type="radio" name="q3" value="0"> Чтобы узнать точную дату окончания тренда</label>
-Используйте код с осторожностью. Чтобы оценить качество (достоверность) подобранного уравнения Чтобы автоматически рассчитать прогноз на 10 лет впередПроверить ответыfunction checkQuiz() {const questions = document.querySelectorAll('.quiz-question');let score = 0;questions.forEach((q) => {const selected = q.querySelector('input[type="radio"]:checked');const labels = q.querySelectorAll('label');labels.forEach(l => l.style.color = '#333');if (selected) {if (selected.value === "1") {score++;selected.parentElement.style.color = '#16a34a';} else {selected.parentElement.style.color = '#dc2626';}}});const resultDiv = document.getElementById('quiz-result');resultDiv.style.display = 'block';resultDiv.innerHTML = Ваш результат: ${score} из ${questions.length} правильных ответов!;}
-5. Прокрутите страницу вниз и дважды нажмите зеленую кнопку **Commit changes** для сохранения новой страницы.
-
----
-
-### Шаг 2. Добавьте тему №4 на главную страницу (`index.html`)
-
-Теперь нужно сделать так, чтобы студенты могли перейти на эту новую страницу с главного экрана.
-
-1. Откройте редактор главной страницы по этой прямой ссылке: [Редактировать index.html на GitHub](https://github.com).
-2. Прокрутите код вниз, найдите конец карточки третьей темы (примерно перед блоком «Об авторе», строка **120–123**).
-3. Вставьте блок карточки для четвертой темы **сразу после закрывающего тега `</section>` третьей темы**:
-
-```html
-            <!-- ТЕМА 4 -->
-            <section class="topic-card">
-                <div class="topic-title">Тема 4: Анализ временных рядов и прогнозирование</div>
-                <p class="topic-desc">Изучим структуру временных рядов, понятия тренда и сезонности. Научимся строить графики, добавлять математические линии тренда и рассчитывать точные прогнозы в Excel.</p>
-                <div class="badges">
-                    <span class="badge badge-theory">📖 Теория</span>
-                    <span class="badge badge-file">📁 Файл данных (timeseries.xlsx)</span>
-                    <span class="badge badge-video">🎬 Видеоинструкция</span>
-                    <span class="badge badge-task">🎯 Лабораторная работа</span>
-                    <span class="badge badge-task">🧠 Тест</span>
-                </div>
-                <a href="topic4.html" class="btn-link">Открыть тему прогнозирования →</a>
-            </section>
