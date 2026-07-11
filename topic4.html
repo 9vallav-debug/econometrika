@@ -170,3 +170,6 @@
                 <div style="margin-bottom: 25px;" class="quiz-question" data-correct="1">
                     <p style="font-weight: 600; margin-bottom: 10px;">3. Зачем при добавлении линии тренда на график выводить значение R-квадрат (R²)?</p>
                     <label style="display: block; margin-bottom: 8px; cursor: pointer;"><input type="radio" name="q3" value="0"> Чтобы узнать точную дату окончания тренда</label>
+Чтобы оценить качество (достоверность) подобранного уравнения Чтобы автоматически рассчитать прогноз на 10 лет впередПроверить ответы
+                    
+                    function checkQuiz() {const questions = document.querySelectorAll('.quiz-question');let score = 0;questions.forEach((q) => {const selected = q.querySelector('input[type="radio"]:checked');const labels = q.querySelectorAll('label');labels.forEach(l => l.style.color = '#333');if (selected) {if (selected.value === "1") {score++;selected.parentElement.style.color = '#16a34a';} else {selected.parentElement.style.color = '#dc2626';}}});const resultDiv = document.getElementById('quiz-result');resultDiv.style.display = 'block';resultDiv.innerHTML = Ваш результат: ${score} из ${questions.length} правильных ответов!;}
